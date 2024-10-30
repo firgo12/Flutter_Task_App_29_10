@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_app/pages/task_create/task_create_page.dart';
@@ -63,8 +64,9 @@ class _TaskListPageState extends State<TaskListPage> {
                           return showDialog(
                             context: context, 
                             builder: (context) {
-                              return AlertDialog(
+                              return CupertinoAlertDialog(
                                 title: Text ('Delete Task'),
+                                content: Text('Delete Task'),
                                 actions: [
                                   TextButton(
                                     onPressed: () {
